@@ -1,23 +1,8 @@
-name: Parallel End to End tests
-on: push
+name: ci
+on: [push]
 jobs:
-  strategy:
-  fail-fast: false
-  matrix:
-    containers: [1, 2, 3]
-steps:
-  - name: Run split Cypress tests 🧪
-    uses: cypress-io/github-action@v5
-    # pass the machine index and the total number
-    env:
-      SPLIT: ${{ strategy.job-total }}
-      SPLIT_INDEX: ${{ strategy.job-index }}
-      
-      - name: artifacts
-        uses: actions/upload-artifact@v3
-        if: always()
-        with: 
-          name: cypress-videos
-          path: cypress/videos
-
-          
+  test:
+    # https://github.com/bahmutov/cypress-workflows
+    uses: bahmutov/cypress-workflows/.github/workflows/split.yml@v2
+    with:
+      nE2E: 3
