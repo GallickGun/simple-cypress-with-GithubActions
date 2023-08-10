@@ -1,0 +1,11 @@
+{
+  "name": "simple-cypress-with-GithubActions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:GallickGun/simple-cypress-with-GithubActions.git",
+  "author": "GallickGun",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^12.17.3"
+  }
+}
