@@ -6,6 +6,7 @@
   "author": "GallickGun",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^12.17.3"
+    "cypress": "^12.17.3",
+    "cypress-split": "^1.3.15"
   }
 }
